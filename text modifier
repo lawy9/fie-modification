@@ -1,0 +1,16 @@
+def modify_file(input_filename, output_filename):
+    try:
+        with open(input_filename, 'r') as infile:
+            content = infile.read()
+        
+        # Modify the content ( converting all text to uppercase)
+        modified_content = content.upper()  
+        
+        # Write the modified content to the output file
+        with open(output_filename, 'w') as outfile:
+            outfile.write(modified_content)
+        
+        print("File modified successfully.")
+    
+    except Exception as e:
+        print(f"An error occurred.")
